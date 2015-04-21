@@ -1,0 +1,28 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="scripts/main.js"></script>
+  </head>
+  <body ng-app="Calculator">
+
+    <div class="container">
+      <h3 class="text-muted">calculator</h3>
+      <div class="jumbotron" ng-controller="calculatorsController">
+        Enter a number:
+        <input type="number" ng-model="number1" />
+        <input type="number" ng-model="number2" />
+        <button ng-click="doSum()">+</button>
+        <button ng-click="doDifference()">-</button>
+        <button ng-click="doMultiplication()">x</button>
+        <button ng-click="doDivision()">/</button>
+        <div>Answer: {{answer}}</div>
+      </div>
+    </div>
+
+  </body>
+</html>
